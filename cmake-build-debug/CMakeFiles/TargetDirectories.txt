@@ -1,0 +1,3 @@
+/home/paola/CLionProjects/HeatEquation/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/paola/CLionProjects/HeatEquation/cmake-build-debug/CMakeFiles/HeatEquation.dir
+/home/paola/CLionProjects/HeatEquation/cmake-build-debug/CMakeFiles/edit_cache.dir

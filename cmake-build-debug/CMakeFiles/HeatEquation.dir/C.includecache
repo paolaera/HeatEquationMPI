@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/paola/CLionProjects/HeatEquation/cmake-build-debug/MyLibrary.h
+
+/home/paola/CLionProjects/HeatEquation/main.c
+stdio.h
+-
+stdlib.h
+-
+mpi.h
+-
+math.h
+-
+cmake-build-debug/MyLibrary.h
+/home/paola/CLionProjects/HeatEquation/cmake-build-debug/MyLibrary.h
+
