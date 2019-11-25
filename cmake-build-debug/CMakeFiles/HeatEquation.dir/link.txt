@@ -1,1 +1,1 @@
-mpicc -g   CMakeFiles/HeatEquation.dir/main.c.o CMakeFiles/HeatEquation.dir/MyLibrary.c.o  -o HeatEquation  -L/usr/local/MATLAB/R2019b/bin/glnxa64 -Wl,-rpath,/usr/local/MATLAB/R2019b/bin/glnxa64 -lmat -lmat -lmx -lmat -lm -lmx -lm 
+mpicc  -O3 -g   CMakeFiles/HeatEquation.dir/main.c.o CMakeFiles/HeatEquation.dir/MyLibrary.c.o  -o HeatEquation  -L/usr/local/MATLAB/R2019b/bin/glnxa64 -Wl,-rpath,/usr/local/MATLAB/R2019b/bin/glnxa64 -lmat -lmat -lmx -lmat -lm -lmx -lm 

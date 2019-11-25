@@ -33,5 +33,6 @@ void exportToParaview(double u0[cubeloc.nxloc][cubeloc.nyloc][cubeloc.nzloc]);
 void MatlabScreen(double u[cubeloc.nxloc][cubeloc.nyloc][cubeloc.nzloc], int its);
 void MatlabFilesClean();
 void sendRecvAllocation(double*** uSend,double*** uRecv,int x,int y);
+void stampaArray(double u1[cubeloc.nxloc][cubeloc.nyloc][cubeloc.nzloc]);
 
 

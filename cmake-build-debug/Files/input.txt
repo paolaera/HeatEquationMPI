@@ -1,5 +1,5 @@
 0   1   //xa,xb -> Cube parms
 0   1   //ya,yb -> Cube parms
 0   1   //za,zb -> Cube parms
-0.03     //grid division
-0   1   0.1     //ti,tf,dt -> Time parms
+0.05     //grid division
+0   1   0.0001     //ti,tf,dt -> Time parms

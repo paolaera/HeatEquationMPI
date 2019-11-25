@@ -10,6 +10,7 @@ include_directories(${MPI_INCLUDE_PATH})
 
 SET(CMAKE_C_COMPILER mpicc)
 SET(CMAKE_CXX_COMPILER mpicxx)
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O3")
 
 set(SOURCE_FILES main.c cmake-build-debug/MyLibrary.c cmake-build-debug/MyLibrary.h cmake-build-debug/MyLibrary.c cmake-build-debug/MyLibrary.h)
 add_executable(HeatEquation ${SOURCE_FILES})

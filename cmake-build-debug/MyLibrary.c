@@ -137,7 +137,7 @@ double exSolution(double x, double y, double z, double t)
 
 double f(double x,double y, double z,double t)
 {
-    return -2*pi*cos(2*pi*(x+y+z-t))-12*pi*pi*sin(2*pi*(x+y+z-t));
+    return -2*pi*cos(2*pi*(x+y+z-t))+12*pi*pi*sin(2*pi*(x+y+z-t));
 }
 
 void exportToParaview(double u1[cubeloc.nxloc][cubeloc.nyloc][cubeloc.nzloc])
@@ -180,7 +180,7 @@ void MatlabScreen(double u[cubeloc.nxloc][cubeloc.nyloc][cubeloc.nzloc], int its
     MPI_Comm_rank (MPI_COMM_WORLD, &myid);
     MATFile *pmat;
     mxArray *pa1;
-    const mwSize dims[3] = {(mwSize)cubeloc.nxloc,(mwSize)cubeloc.nyloc,(mwSize)cubeloc.nzloc};
+    const mwSize dims[3] = {(mwSize)cubeloc.nzloc,(mwSize)cubeloc.nyloc,(mwSize)cubeloc.nxloc};
 
     char id[12];
     sprintf(id, "%d", myid);
@@ -195,9 +195,10 @@ void MatlabScreen(double u[cubeloc.nxloc][cubeloc.nyloc][cubeloc.nzloc], int its
     char variablename[80];
     strcpy(variablename, "u2_");
     strcat(variablename, id);
+    /*
     strcat(variablename, "_iter_");
     strcat(variablename, iter);
-
+*/
     pmat = matOpen(filename, "u");
 
     pa1 = mxCreateNumericArray((mwSize)3,dims,mxDOUBLE_CLASS,mxREAL);
@@ -223,4 +224,22 @@ void sendRecvAllocation(double*** uSend,double*** uRecv,int x,int y)
         uRecv2[i]=(double*)calloc(y,sizeof(double));
     }
     *uRecv=uRecv2;
+}
+
+void stampaArray(double u1[cubeloc.nxloc][cubeloc.nyloc][cubeloc.nzloc])
+{
+    int i=0,j=0,k=0;
+    FILE *file;
+    //fp=freopen(NULL,"w+",fp);
+
+    file = fopen("Files/Stampe.csv","w");
+    fprintf(file,"x coord, y coord, z coord, scalar\n");
+    for (i = 0; i < cubeloc.nxloc; i++) {
+        for (j = 0; j < cubeloc.nyloc; j++) {
+            for (k = 0; k < cubeloc.nzloc; k++) {
+                fprintf(file, "%d,%d,%d,%lf\n", i, j, k, u1[i][j][k]);
+            }
+        }
+    }
+    fclose(file);
 }
