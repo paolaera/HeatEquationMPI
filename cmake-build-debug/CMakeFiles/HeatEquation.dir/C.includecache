@@ -6,6 +6,24 @@
 
 #IncludeRegexTransform: 
 
+/home/paola/CLionProjects/HeatEquation/cmake-build-debug/MyLibrary.c
+MyLibrary.h
+/home/paola/CLionProjects/HeatEquation/cmake-build-debug/MyLibrary.h
+stdio.h
+-
+string.h
+-
+stdlib.h
+-
+mpi.h
+-
+math.h
+-
+/usr/local/MATLAB/R2019b/extern/include/mat.h
+-
+/usr/local/MATLAB/R2019b/extern/include/matrix.h
+-
+
 /home/paola/CLionProjects/HeatEquation/cmake-build-debug/MyLibrary.h
 
 /home/paola/CLionProjects/HeatEquation/main.c
@@ -19,4 +37,32 @@ math.h
 -
 cmake-build-debug/MyLibrary.h
 /home/paola/CLionProjects/HeatEquation/cmake-build-debug/MyLibrary.h
+
+/usr/local/MATLAB/R2019b/extern/include/mat.h
+matrix.h
+/usr/local/MATLAB/R2019b/extern/include/matrix.h
+stdio.h
+-
+matrix.h
+/usr/local/MATLAB/R2019b/extern/include/matrix.h
+
+/usr/local/MATLAB/R2019b/extern/include/matrix.h
+stdlib.h
+-
+stddef.h
+-
+tmwtypes.h
+/usr/local/MATLAB/R2019b/extern/include/tmwtypes.h
+assert.h
+-
+
+/usr/local/MATLAB/R2019b/extern/include/tmwtypes.h
+limits.h
+-
+stdbool.h
+-
+float.h
+-
+stddef.h
+-
 
